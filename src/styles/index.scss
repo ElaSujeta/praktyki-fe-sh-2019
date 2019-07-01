@@ -1,5 +1,109 @@
-$body-color: blue;
+
+@import "./reset.scss";
+
+
+$productColor:  #3146FF;
+$textColor: #000000;
+$backgroundColor: #F7F7F7;
+$secondaryColor: #01FFCB;
+
+$font-roboto: 'Roboto', sans-serif;
+$font-poppins: 'Poppins', sans-serif; 
+
 
 body {
-  color: $body-color;
+  color: $textColor;
+  font-family: $font-roboto;
+  box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+
+// *************** header styles **************
+
+.top {
+  //position: fixed; 
+  height: 130px;
+  line-height: 130px;
+
+  .logo {
+    float: left;
+  }
+
+  .menu {
+    float: right;
+
+   .menu_list {
+
+      &__item {
+       display: inline-block;
+       padding: 0 20px;
+       font-size: 13px;
+
+        &--options {
+          display: inline-block;
+          padding: 0 30px;
+          font-size: 17px;
+        }
+      }
+    
+      a:link, a:hover, a:visited {
+        color: $textColor;
+        text-decoration: none;
+      }
+
+      .getApp {
+        height: 80px;
+        width: 280px;
+        background-color: $productColor;
+        color: $backgroundColor;
+        text-align: center;
+
+        a {
+          color: $backgroundColor;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 1380px;
+  margin: 0 auto;
+
+  .submenu {
+    height: 70px;
+    width: 850px;
+    
+    &__item{
+      display: inline-block;
+      font-size: 19px;
+      //line-height: 27px;
+      padding: 35px;
+
+      a {
+        text-decoration: none;
+      }
+      a:link, a:visited {
+        color: $textColor;
+      }
+      a:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+
+.hero {
+  color: green;
+  &__headline {
+    color: brown;
+    &--seconds {
+      color: pink;
+    }
+  }
 }
