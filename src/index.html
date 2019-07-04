@@ -101,6 +101,53 @@
       <a href="#" class="slider__dot"></a>
     </div>
   </section>
+
+  <section class="form-section">
+    <div class="container">
+      <div class="contact">
+          <a href="#" class="contact__link">Contact form</a>
+          <a href="#" class="contact__link">Call us</a>
+      </div>
+      <form class="form" method="POST" action="?">
+         
+        <div class="form__element">
+          <label class="form__label">First name<sup>*</sup>
+            <input class="form__input" type="text" name="name" placeholder="John" required>
+          </label>
+        </div>
+
+        <div class="form__element">
+          <label class="form__label">Family name<sup>*</sup>
+            <input class="form__input" type="text" name="surname" placeholder="Wick" required>
+          </label>
+        </div>
+
+        <div class="form__element">
+          <label class="form__label">Your phone
+            <input class="form__input" type="email"  name="phone" placeholder="+48 605 708 904">
+          </label>
+        </div>
+                  
+        <div class="form__element">
+          <label class="form__label">Your email<sup>*</sup>
+            <input class="form__input" type="email"  name="email" placeholder="johnwick@hollywood.com" autocomplete="off" required>
+          </label>
+        </div>
+
+        <div class="form__element form__element--message">
+          <label class="form__label form__label--message" for="message">Message<sup>*</sup>
+            <textarea class="form__input form__input--message" name="message" placeholder="Hello :) I'm just wondering if you could" required></textarea>
+           </label>
+        </div>
+
+        <div class="button">
+          <button class="button__sumbit" type="submit">Send message</button>
+        </div>
+                  
+      </form>
+    </div>
+  </section>
+  
  
 </body>
 

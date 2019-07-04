@@ -1,0 +1,98 @@
+@import "./variables.scss";
+@import "./media_gueries.scss";
+
+
+.form-section {
+  margin-bottom: 100px;
+
+  @include respond(phone) {
+    display: none; //tymczasowo
+  }
+   
+    .contact {
+      font-family: $font-roboto;
+      margin-bottom: $metric-xlarge;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: $metric-base;
+
+      &__link {
+        text-decoration: none;
+        margin: 0 $metric-small;
+      }
+      &__link:link,  &__link:visited {
+        color: $textColor;
+      }
+      &__link:hover {
+        font-weight: bold;
+        border-bottom: 2px solid $secondaryColor;
+      }
+
+      @include respond(phone) {
+        justify-content: flex-start;
+      }
+    
+
+    }
+    .form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+
+      &__element {
+        width: 50%;
+        padding: 50px 0;
+        
+        .form__label {
+          width: 100%;
+          font-family: $font-roboto;
+          font-size: 13px;
+          font-weight: 300;
+
+        }
+        .form__input {
+          display: block;
+          border: none;
+          width: 100%;
+          padding: $metric-small 0;
+          font-family: $font-roboto;
+          font-size: $fs-big;
+          color: $textColor;
+          background-image: radial-gradient(rgb(0, 0, 0) 1px, rgb(255, 255, 255) 1px);
+          background-position: bottom;
+          background-size: 6px 1px;
+          background-repeat: repeat-x;
+
+        }
+
+        .form__label--message {
+          width: 100%;
+        }
+        
+      }
+      .form__element--message {
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      .form__input--message {
+        display: block;
+        width: 100%;
+      }
+
+      .button {
+        margin: 0 auto;
+
+        &__sumbit {
+          background-color: $productColor;
+          width: 200px;
+          height: 60px;
+          font-family: $font-roboto;
+          font-size: $fs-xsmall;
+          color: $backgroundColor;
+        }
+      }
+    }
+}
