@@ -1,23 +1,25 @@
 @import "./variables.scss";
 @import "./media_gueries.scss";
+@import "./hero_section.scss";
 
 
 .form-section {
   margin: $metric-xlarge 0 $metric-xlarge 0;
- 
 
-  @include respond(phone) {
-    display: none; //tymczasowo
+  @include respond(phone){
+    width: $breakpoint-phone;
+    background-image: none;
+    box-sizing: border-box;
+    padding: $metric-base;
   }
-   
+  
     .contact {
       font-family: $font-roboto;
       margin-bottom: $metric-xlarge;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      //margin-top: $metric-base;
-
+      
       &__link {
         text-decoration: none;
         margin: 0 $metric-small;
@@ -40,15 +42,23 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      font-family: $font-roboto;
     
+      @include respond(phone) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+       }
 
       &__element {
         width: 50%;
         padding: 50px 0;
+
+        @include respond(phone) {
+         width: 100%;
+        }
         
         .form__label {
           width: 100%;
-          font-family: $font-roboto;
           font-size: 13px;
           font-weight: 300;
 
@@ -58,7 +68,6 @@
           border: none;
           width: 100%;
           padding: $metric-small 0;
-          font-family: $font-roboto;
           font-size: $fs-big;
           color: $textColor;
           background-image: radial-gradient(rgb(0, 0, 0) 1px, rgb(255, 255, 255) 1px);
@@ -73,7 +82,7 @@
         }
         
       }
-      .form__element--message {
+      &__element--message {
         flex-grow: 1;
         width: 100%;
       }
@@ -90,9 +99,9 @@
           background-color: $productColor;
           width: 200px;
           height: 60px;
-          font-family: $font-roboto;
           font-size: $fs-xsmall;
           color: $backgroundColor;
+          border: none;
         }
 
         &__submit:hover {
@@ -100,4 +109,11 @@
         }
       }
     }
+}
+
+.container {
+  @include respond(phone) {
+    width: $breakpoint-phone;
+   }
+
 }
