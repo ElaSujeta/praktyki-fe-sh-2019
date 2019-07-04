@@ -1,0 +1,165 @@
+@import "./variables.scss";
+@import "./media_gueries.scss";
+
+
+header {
+  background-color: #fff;
+  max-width: 1880px;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: $font-roboto;
+
+  @include respond(phone) {
+    height: 80px;
+    width: 600px;
+  }
+}
+
+.top {
+  height: 130px;
+  line-height: 130px;
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: $metric-base;
+  }
+
+  .logo {
+    float: left;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  .menu {
+    float: right;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+   .menu_list {
+
+      &__item {
+       display: inline-block;
+       padding: 0 $metric-small;
+       font-size: 13px;
+
+        &--options {
+          display: inline-block;
+          padding: 0 $metric-base;
+          font-size: $fs-xsmall;
+        }
+      }
+    
+      a:link, a:hover, a:visited {
+        color: $textColor;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: $metric-base;
+        .dropdown_option {
+          font-size: 13px;
+          margin: 0;
+          height: $metric-base;
+        }
+      }
+
+      .getApp {
+        height: 80px;
+        width: 280px;
+        background-color: $productColor;
+        color: $backgroundColor;
+        text-align: center;
+
+        a {
+          color: $backgroundColor;
+        }
+      }
+
+      @include respond(phone){
+        display: none;
+      }
+    }
+    .lang:hover .dropdown {
+      display: block;
+    } 
+  }
+}
+
+.container {
+  width: 1380px;
+  margin: 0 auto;
+
+  .submenu {
+    height: 70px;
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+
+      @include respond(phone) {
+       display: none;
+     }
+
+    &__item {
+      font-size: 19px;
+      padding: 0 30px 50px 30px;
+
+      @include respond(phone) {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      a:link, a:visited {
+        color: $textColor;
+      }
+      a:hover {
+        font-weight: bold;
+        border-bottom: 2px solid $secondaryColor;
+      }
+    }
+    
+  }
+}
+
+.logo_mob {
+  display: none;
+
+  @include respond(phone){
+    display: inline-block;
+  }
+}
+.submenu_mob__title {
+  display: none;
+  font-size: $fs-small;
+  font-weight: bold;
+
+  @include respond(phone){
+    display: inline-block;
+  }
+}
+
+.button_hamburger {
+  display: none;
+  color: $productColor;
+  .fas fa-bars {
+    height: 50px;
+    width: 50px;
+  }
+
+  @include respond(phone){
+    display: inline-block;
+  }
+}

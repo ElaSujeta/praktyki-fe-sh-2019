@@ -1,0 +1,197 @@
+@import "./variables.scss";
+@import "./media_gueries.scss";
+
+//**************************first section style **********************
+
+.hero {
+  background-color: $backgroundColor;
+  max-width: 1880px;
+  height: 780px;
+  background-image: url("../images/first_section_bg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  @include respond(phone){
+    width: 600px;
+    height: 1300px;
+    background-image: none;
+    box-sizing: border-box;
+    padding: $metric-base;
+  }
+ 
+  .hero__container {
+    max-width: 1380px;
+    height: inherit;
+    margin: 0 auto;
+    background-image: url("../images/hand.png");
+    background-repeat: no-repeat;
+    background-position: right -60px bottom -90px;
+
+    @include respond(phone){
+      width: 600px;
+      background-image: none;
+    }
+    
+    .hero__left {
+      width: 50%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond(phone){
+        width: 100%;
+      }
+
+      .hero__header {
+        color: $productColor;
+        font-size: $fs-huge;
+        font-family: $font-poppins;
+        font-weight: bold;
+        margin: $metric-base 0;
+
+        @include respond(phone){
+          width: 100%;
+          font-size: 60px;
+        }
+      }
+
+      .hero__description {
+        color: $textColor;
+        font-size: $fs-big;
+        font-family: $font-roboto;
+        line-height: 40px;
+        margin: $metric-base 0;
+
+        @include respond(phone){
+           order: 1; 
+           font-size: 22px;
+          }
+      }
+
+      .hero__buttons {
+
+        @include respond(phone){
+          order: 2; 
+          margin: 0 auto;
+
+         }
+      }
+
+      .hero_button {
+         height: 70px;
+         width: 200px;
+         border-style: none;
+         outline: none;
+         margin: 20px;
+         background-size: contain;
+      }
+
+      .hero_button:hover {
+        cursor: pointer;
+      }
+
+      .button_google {
+        background-image: url("../images/google-play.png");
+      }
+        
+      .button_apple {
+         background-image: url("../images/app-store.png");
+      }
+
+      .hero_mob {
+        display: none;
+        background-image: url("../images/desks.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include respond(phone){
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.hero__info {
+  background-color: $backgroundColor;
+  max-width: 1880px;
+
+  @include respond(phone){
+    width: 600px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include respond(phone){
+      width: 600px;
+      box-sizing: border-box;
+      padding: $metric-base;
+    }
+
+    .column {
+      width: 33%;
+      margin: $metric-large $metric-xlarge $metric-large 0;
+      color: $textColor;
+
+      &__headline {
+        font-family: $font-poppins;
+        font-weight: bold;
+        font-size: $fs-big;
+        line-height: 40px;
+      }
+
+      &__description {
+        font-family: $font-roboto;
+        font-weight: 300;
+        font-size: $fs-small;
+        line-height: 27px;
+        margin-top: 30px;
+      }
+
+      @include respond(phone){
+        display: block;  
+        width: 100%; 
+        padding: $metric-xsmall;
+      }
+    }
+
+    .column:last-child {
+      margin: $metric-large 0 $metric-large 0;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    .column:nth-last-child(2) {
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  .slider {
+    width: 100%;
+    max-width: 65px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  
+    @include respond(desktop) {
+      display: none;
+    }
+
+    &__dot {
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $textColor;
+    }
+  }
+}
