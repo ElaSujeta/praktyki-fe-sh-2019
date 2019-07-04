@@ -3,7 +3,8 @@
 
 
 .form-section {
-  margin-bottom: 100px;
+  margin: $metric-xlarge 0 $metric-xlarge 0;
+ 
 
   @include respond(phone) {
     display: none; //tymczasowo
@@ -15,7 +16,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin-top: $metric-base;
+      //margin-top: $metric-base;
 
       &__link {
         text-decoration: none;
@@ -85,13 +86,17 @@
       .button {
         margin: 0 auto;
 
-        &__sumbit {
+        &__submit {
           background-color: $productColor;
           width: 200px;
           height: 60px;
           font-family: $font-roboto;
           font-size: $fs-xsmall;
           color: $backgroundColor;
+        }
+
+        &__submit:hover {
+         cursor: pointer;
         }
       }
     }

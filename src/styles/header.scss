@@ -45,7 +45,7 @@ header {
       display: none;
     }
 
-   .menu_list {
+   .menu-list {
 
       &__item {
        display: inline-block;
@@ -59,7 +59,7 @@ header {
         }
       }
     
-      a:link, a:hover, a:visited {
+      &__link:link, &__link:hover, &__link:visited {
         color: $textColor;
         text-decoration: none;
       }
@@ -82,7 +82,7 @@ header {
         color: $backgroundColor;
         text-align: center;
 
-        a {
+        .menu-list__link {
           color: $backgroundColor;
         }
       }
@@ -119,29 +119,30 @@ header {
         display: none;
       }
 
-      a {
-        text-decoration: none;
-      }
-      a:link, a:visited {
-        color: $textColor;
-      }
-      a:hover {
-        font-weight: bold;
-        border-bottom: 2px solid $secondaryColor;
-      }
     }
-    
+
+    &__link {
+      text-decoration: none;
+    }
+    &__link:link, &__link:visited {
+      color: $textColor;
+    }
+    &__link:hover {
+      font-weight: bold;
+      border-bottom: 2px solid $secondaryColor;
+    }
+
   }
 }
 
-.logo_mob {
+.logo-mob {
   display: none;
 
   @include respond(phone){
     display: inline-block;
   }
 }
-.submenu_mob__title {
+.submenu-mob__title {
   display: none;
   font-size: $fs-small;
   font-weight: bold;
@@ -151,7 +152,7 @@ header {
   }
 }
 
-.button_hamburger {
+.button-hamburger {
   display: none;
   color: $productColor;
   .fas fa-bars {
