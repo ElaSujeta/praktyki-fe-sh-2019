@@ -124,7 +124,7 @@
 
         <div class="form__element">
           <label class="form__label">Your phone
-            <input class="form__input" type="email"  name="phone" placeholder="+48 605 708 904">
+            <input class="form__input" type="text"  name="phone" placeholder="+48 605 708 904">
           </label>
         </div>
                   
@@ -146,8 +146,45 @@
                   
       </form>
     </div>
+
+
+    <div class="container">
+    <form class="floating-form">
+      <div class="form-group">
+        <input id="user_name" class="form-input-floating" type="text" required>
+        <label for="user_name" class="form-label">First name<sup>*</sup></label>
+      </div>
+      
+      <div class="form-group">
+        <input id="user_surname" class="form-input-floating" type="text" required>
+        <label for="user_surname" class="form-label">Family name<sup>*</sup></label>
+      </div>
+
+      <div class="form-group">
+        <input id="user_phone" class="form-input-floating" type="text" required>
+        <label for="user_phone" class="form-label">Your phone</label>
+      </div>
+
+      <div class="form-group">
+        <input id="user_email" class="form-input-floating" type="email" required>
+        <label for="user_email" class="form-label">Your email<sup>*</sup></label>
+      </div>
+
+      <div class="button">
+          <button class="button__submit" type="submit">Send message</button>
+        </div>
+    </form>
+    </div>
+
+
+
+
   </section>
+
+
   
+
+
  
 </body>
 
