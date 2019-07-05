@@ -1,0 +1,51 @@
+@import "./variables.scss";
+@import "./media_gueries.scss";
+
+.problem-solv {
+  background-color: $backgroundColor;
+  max-width: 1880px;
+  padding-bottom: $metric-medium;
+
+  @include respond(phone) {
+    display: none;
+   }
+
+  .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+
+  &__header {
+    font-family: $font-roboto;
+    font-size: $fs-xsmall;
+    font-weight: 400;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  &__column {
+    box-sizing: border-box;
+    margin: 0px 40px 0 0;
+    padding: 20px;
+    width: 310px;
+    background-color: #fff;
+    padding: $metric-large;
+    line-height: 25px;
+  }
+
+  &__title {
+    font-family: $font-poppins;
+    font-size: $fs-small;
+    font-weight: bold;
+    margin-top: $metric-large;
+    margin-bottom: $metric-medium;
+  }
+
+  &__description {
+    font-family: $font-roboto;
+    font-size: $fs-xsmall;
+    font-weight: 300;
+  }
+}

@@ -162,5 +162,6 @@ header {
 
   @include respond(phone){
     display: inline-block;
+    padding-right: 20px;
   }
 }

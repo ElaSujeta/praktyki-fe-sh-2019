@@ -102,6 +102,38 @@
     </div>
   </section>
 
+  <section class="problem-solv">
+    <h4 class="problem-solv__header">Problem solving app</h4>
+      <div class="container">
+        <div class="problem-solv__column">
+          <img class="problem-solv__img" src="src/images/mob_roblem_solving.png" alt="small desks">
+          <h3 class="problem-solv__title">Use your time and space smarter</h3>
+          <p class="problem-solv__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor ex, ac bibendum ante.</p>
+        </div>
+        <div class="problem-solv__column">
+          <img class="problem-solv__img" src="src/images/mob_roblem_solving.png" alt="small desks">
+          <h3 class="problem-solv__title">Never stress about meetings again </h3>
+          <p class="problem-solv__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor ex, ac bibendum ante.</p>
+        </div>
+        <div class="problem-solv__column">
+          <img class="problem-solv__img" src="src/images/mob_roblem_solving.png" alt="small desks">
+          <h3 class="problem-solv__title">Find the right person in a breeze</h3>
+          <p class="problem-solv__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor ex, ac bibendum ante.</p>
+        </div>
+        <div class="problem-solv__column">
+          <img class="problem-solv__img" src="src/images/mob_roblem_solving.png" alt="small desks">
+          <h3 class="problem-solv__title">Save your desk and room space </h3>
+          <p class="problem-solv__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor ex, ac bibendum ante.</p>
+        </div>
+        <div class="problem-solv__column">
+          <img class="problem-solv__img" src="src/images/mob_roblem_solving.png" alt="small desks">
+          <h3 class="problem-solv__title">Swiftly introduce new employees</h3>
+          <p class="problem-solv__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor ex, ac bibendum ante.</p>
+        </div>
+      </div>
+  </section>
+
+
   <section class="form-section">
     <div class="container">
       <div class="contact">
@@ -111,33 +143,28 @@
       <form class="form" method="POST" action="?">
          
         <div class="form__element">
-          <label class="form__label">First name<sup>*</sup>
-            <input class="form__input" type="text" name="name" placeholder="John" required>
-          </label>
+          <input id="user_name" class="form__input" type="text"  name="name" required>
+          <label for="user_name" class="form__label">First name<sup>*</sup></label>
         </div>
 
         <div class="form__element">
-          <label class="form__label">Family name<sup>*</sup>
-            <input class="form__input" type="text" name="surname" placeholder="Wick" required>
-          </label>
+            <input id="user_surname" class="form__input" type="text"  name="surname" required>
+            <label for="user_surname" class="form__label">Family name<sup>*</sup></label>
         </div>
 
         <div class="form__element">
-          <label class="form__label">Your phone
-            <input class="form__input" type="text"  name="phone" placeholder="+48 605 708 904">
-          </label>
+            <input id="user_phone" class="form__input" type="text"  name="phone" required>
+            <label for="user_phone" class="form__label">Phone number</label>
         </div>
                   
         <div class="form__element">
-          <label class="form__label">Your email<sup>*</sup>
-            <input class="form__input" type="email"  name="email" placeholder="johnwick@hollywood.com" autocomplete="off" required>
-          </label>
+          <input id="user_email" class="form__input" type="email"  name="email" required>
+          <label for="user_email" class="form__label">Email<sup>*</sup></label>
         </div>
 
         <div class="form__element form__element--message">
-          <label class="form__label form__label--message" for="message">Message<sup>*</sup>
-            <textarea class="form__input form__input--message" name="message" placeholder="Hello :) I'm just wondering if you could" required></textarea>
-           </label>
+           <textarea id="message" class="form__input form__input--message"  name="message" required></textarea>
+           <label for="message" class="form__label form__label--message">Message<sup>*</sup></label>
         </div>
 
         <div class="button">
@@ -148,34 +175,7 @@
     </div>
 
 
-    <div class="container">
-    <form class="floating-form">
-      <div class="form-group">
-        <input id="user_name" class="form-input-floating" type="text" required>
-        <label for="user_name" class="form-label">First name<sup>*</sup></label>
-      </div>
-      
-      <div class="form-group">
-        <input id="user_surname" class="form-input-floating" type="text" required>
-        <label for="user_surname" class="form-label">Family name<sup>*</sup></label>
-      </div>
-
-      <div class="form-group">
-        <input id="user_phone" class="form-input-floating" type="text" required>
-        <label for="user_phone" class="form-label">Your phone</label>
-      </div>
-
-      <div class="form-group">
-        <input id="user_email" class="form-input-floating" type="email" required>
-        <label for="user_email" class="form-label">Your email<sup>*</sup></label>
-      </div>
-
-      <div class="button">
-          <button class="button__submit" type="submit">Send message</button>
-        </div>
-    </form>
-    </div>
-
+    
 
 
 

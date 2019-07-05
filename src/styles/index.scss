@@ -5,6 +5,7 @@
 @import "./header.scss";
 @import "./hero_section.scss";
 @import "./form.scss";
+@import "./problem_solv_section.scss";
 
 
 
@@ -15,6 +16,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   padding-top: 200px;
+
 
   @include respond(phone) {
     padding-top: 130px;
